@@ -1,0 +1,15 @@
+# 🐝 Autonomous Agent Swarm
+
+> **Governing Authority:** Governing Officer Tarwater  
+> **Control Plane:** Governed under `autonomous-governance-core`
+
+## Overview
+`autonomous-agent-swarm` houses specialized worker agents designed to assist and audit your ecosystem without cluttering your core governance repository. 
+
+### Specialized Agent Roles
+1. **Security Auditor (`agents/security_auditor.py`)**: Scans target repositories for hardcoded API keys, tokens, and vulnerable dependency patterns, automatically opening Security Incident Issues and Pull Requests.
+2. **Test Generator (`agents/test_generator.py`)**: Identifies modules lacking unit tests and uses LLM intelligence to generate robust `pytest` suites.
+3. **Documentation Sync (`agents/doc_sync_agent.py`)**: Synchronizes repository `README.md` files with active code structures.
+
+## Operational Safety
+Before any agent runs, `swarm_dispatcher.py` pulls the live `governance_config.yaml` from `autonomous-governance-core`. If Governing Officer Tarwater engages the global kill switch, all swarm execution is immediately halted.
