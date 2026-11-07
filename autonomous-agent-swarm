@@ -1,0 +1,14 @@
+autonomous-agent-swarm/
+├── .github/
+│   └── workflows/
+│       └── swarm_dispatch.yml
+├── agents/
+│   ├── __init__.py
+│   ├── security_auditor.py
+│   ├── test_generator.py
+│   └── doc_sync_agent.py
+├── swarm_dispatcher.py
+├── CONSTITUTION.md
+├── governance_config.yaml
+├── requirements.txt
+└── README.md
